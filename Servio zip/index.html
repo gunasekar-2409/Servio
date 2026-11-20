@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SERVIO — Local Skills. Trusted Services. Simple Bookings.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-base=".">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="muted" style="color:#c5d4c3">Local home services in Tiruchirappalli</p>
+        <h1>Your Local Experts, Just a Booking Away.</h1>
+        <p>From everyday repairs to essential home services, find local professionals who fit your needs and schedule.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="pages/services.html">Explore Services</a>
+          <a class="btn btn-ghost" href="pages/signup.html?role=provider">Become a Provider</a>
+        </div>
+        <form id="hero-search" class="search-bar" role="search">
+          <label class="sr-only" for="hero-query">Service name or keyword</label>
+          <input id="hero-query" name="query" placeholder="Service name or keyword">
+          <label class="sr-only" for="hero-category">Category</label>
+          <select id="hero-category" name="category">
+            <option value="">All categories</option>
+          </select>
+          <label class="sr-only" for="hero-location">Location</label>
+          <input id="hero-location" name="location" placeholder="Area in Trichy">
+          <button class="btn btn-navy" type="submit">Search</button>
+        </form>
+        <div class="hero-thumbs">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80" alt="Painter coating an interior wall">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80" alt="Freshly painted orange wall">
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-main" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80" alt="Independent electrician wearing safety gear and a tool belt">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Service categories</h2>
+        <p class="muted">Browse the kinds of work independent providers list on SERVIO.</p>
+        <div id="category-grid" class="category-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff">
+      <div class="container">
+        <h2>Featured services</h2>
+        <p class="muted">Sample listings for the demonstration. Prices and ratings are example data.</p>
+        <div id="featured-grid" class="service-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <h2>How SERVIO Works</h2>
+        <div class="steps">
+          <article class="step"><div class="step-num">1</div><h3>Discover a service</h3><p>Search by keyword, category, or neighbourhood.</p></article>
+          <article class="step"><div class="step-num">2</div><h3>Choose a provider</h3><p>Compare descriptions, starting prices, and sample ratings.</p></article>
+          <article class="step"><div class="step-num">3</div><h3>Select an appointment</h3><p>Pick a demonstration date and time slot the provider has marked available.</p></article>
+          <article class="step"><div class="step-num">4</div><h3>Submit a request</h3><p>Send a booking request. The provider can accept or decline it in their dashboard.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--color-navy);color:#fff">
+      <div class="container split">
+        <div>
+          <h2 style="color:#fff">Independent providers, more visibility</h2>
+          <p>SERVIO is built so local workers can list skills, set prices, and manage requests without a complicated shopfront. You control availability, accept the jobs that fit, and keep a record of pending and completed work.</p>
+          <a class="btn btn-primary" href="pages/signup.html?role=provider">Create a provider account</a>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80" alt="Carpenter at a workbench" style="border-radius:16px;height:320px;width:100%;object-fit:cover">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Clear information before you book</h2>
+          <p>Every listing shows a service description, starting price, area, and provider profile details. Availability in this demo is labelled as demonstration data. SERVIO does not invent certifications or guaranteed outcomes.</p>
+        </div>
+        <div class="card" style="padding:1.5rem">
+          <h3>What you can check</h3>
+          <p>Provider name and years of experience (sample profiles).</p>
+          <p>Service area around Tiruchirappalli.</p>
+          <p>Appointment slots stored in the local demo calendar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff">
+      <div class="container">
+        <h2>Sample comments</h2>
+        <p class="notice">The quotes below are fictional examples for layout only. They are not verified customer reviews.</p>
+        <div class="service-grid">
+          <article class="card" style="padding:1.25rem"><p>“The listing made the job and price obvious before I sent a request.”</p><p class="muted">Sample comment · home cleaning</p></article>
+          <article class="card" style="padding:1.25rem"><p>“I could see available slots and keep the booking in My Bookings.”</p><p class="muted">Sample comment · electrical work</p></article>
+          <article class="card" style="padding:1.25rem"><p>“As a provider, accepting or declining requests from one screen was straightforward.”</p><p class="muted">Sample comment · plumbing</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="text-align:center">
+        <h2>Ready to find a local professional?</h2>
+        <p class="muted">Explore sample services or join as an independent provider.</p>
+        <a class="btn btn-primary" href="pages/services.html">Explore Services</a>
+        <a class="btn btn-secondary" href="pages/contact.html">Contact</a>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/config.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/mock-api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

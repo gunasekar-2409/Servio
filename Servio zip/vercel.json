@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/login",
+      "dest": "/pages/login.html"
+    },
+    {
+      "src": "/signup",
+      "dest": "/pages/signup.html"
+    },
+    {
+      "src": "/customer-dashboard",
+      "dest": "/pages/customer-dashboard.html"
+    },
+    {
+      "src": "/provider-dashboard",
+      "dest": "/pages/provider-dashboard.html"
+    },
+    {
+      "src": "/vendor-dashboard",
+      "dest": "/pages/provider-dashboard.html"
+    },
+    {
+      "src": "/services",
+      "dest": "/pages/services.html"
+    },
+    {
+      "src": "/service-details",
+      "dest": "/pages/service-details.html"
+    },
+    {
+      "src": "/booking",
+      "dest": "/pages/booking.html"
+    },
+    {
+      "src": "/bookings",
+      "dest": "/pages/bookings.html"
+    },
+    {
+      "src": "/reviews",
+      "dest": "/pages/reviews.html"
+    },
+    {
+      "src": "/profile",
+      "dest": "/pages/profile.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/pages/about.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/pages/contact.html"
+    },
+    {
+      "src": "/payment",
+      "dest": "/pages/payment.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization, X-Requested-With"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
